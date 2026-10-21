@@ -1,0 +1,14 @@
+# The one service under test: the payment service of the OpenTelemetry Demo.
+# POST /ingest {"source_type": "github"} fetches only what is listed here; `path` is a file or a folder.
+
+code:                      # type: github. Commits touching the service; squash-merged ones are stored as their PR.
+  - repo: open-telemetry/opentelemetry-demo
+    path: src/payment
+
+runbooks: []               # type: runbook. The payment service ships none; write your own in data/docs/runbooks/.
+
+docs:                      # type: doc. Official documentation of the service.
+  - repo: open-telemetry/opentelemetry.io
+    path: content/en/docs/demo/services/payment.md
+  - repo: open-telemetry/opentelemetry-demo
+    path: src/payment/README.md

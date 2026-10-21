@@ -1,0 +1,11 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:v1.9.3   # qdrant-client is pinned <1.10 to match
+    restart: unless-stopped       # come back when Docker restarts
+    ports:
+      - "6333:6333"
+    volumes:
+      - qdrant_data:/qdrant/storage
+
+volumes:
+  qdrant_data:
